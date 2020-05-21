@@ -13,10 +13,12 @@ class Singleton:
 
     @staticmethod
     def setCounter(val):
-        Singleton.__instance.__counter = val
+        # Singleton.__instance.__counter = val
+        Singleton.__counter = val
 
     @staticmethod
     def getCounter():
-        return Singleton.__instance.__counter
+        # return Singleton.__instance.__counter
+        return Singleton.__counter
 
  

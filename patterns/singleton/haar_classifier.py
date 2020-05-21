@@ -12,12 +12,18 @@ class HaarClassifier:
             HaarClassifier.__instance = self
 
     @staticmethod
+    def getInstance():
+        if HaarClassifier.__instance is None:
+            HaarClassifier()
+        return HaarClassifier.__instance
+
+    @staticmethod
     def setFaceCascade(fName):
-        HaarClassifier.__instance.__frontal_face = cv2.CascadeClassifier(fName)
+        HaarClassifier.__frontal_face = cv2.CascadeClassifier(fName)
 
     @staticmethod
     def getFaceCascade():
-        return HaarClassifier.__instance.__frontal_face
+        return HaarClassifier.__frontal_face
 
 
 
