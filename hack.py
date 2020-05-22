@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
         # modify priate variavle?
         c.__count = 29
-        print(c.getCount(), end='\n')
+        # print(c.getCount(), end='\n')
 
         # access private variable?
         # print(c.__count, end='\n')
