@@ -1,16 +1,5 @@
-class AsiaZone:
+from factory import Factory
+
+class AsiaZone(Factory):
     def __init__(self):
-        self.__confidence = 10
-        self.__threshold = 10
-
-    def setConfidence(self, val):
-        self.__confidence = val
-    
-    def getConfidence(self):
-        return self.__confidence
-
-    def setThreshold(self, val):
-        self.__threshold = val
-    
-    def getThreshold(self):
-        return self.__threshold
+        Factory.__init__(self, 10, 10)

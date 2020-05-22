@@ -9,8 +9,6 @@ class Counter:
     def getCount(self):
         return self.__count
 
-# class MyClass:
-
 if __name__ == '__main__':
     try:
         c = Counter(1)
