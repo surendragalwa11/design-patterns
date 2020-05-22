@@ -15,11 +15,16 @@ class ZoneFactory:
 
     def getZone(self):
         config = self.getFactoryConfig()
-        zone = config[self.zone]
+        try:
+            zone = config[self.zone]
+        except Exception as e:
+            # default zone when we don't have zone config
+            zones = list(config.keys())
+            zone = config[zones[0]]
         return zone
 
 if __name__ == '__main__':
-    zone = ZoneFactory('ASI').getZone()
+    zone = ZoneFactory('UK').getZone()
     confidence = zone.getConfidence()
     threshold = zone.getThreshold()
     print(confidence, threshold)
